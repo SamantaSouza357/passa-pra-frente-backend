@@ -1,0 +1,35 @@
+/////////////////////////////////////////////////////////////
+
+from rest_framework import serializers 
+from escola.models import Escola 
+
+
+class EscolaSerializer(serializers.ModelSerializer):
+    class Meta:
+    model = Escola
+    fields = ['id','nome','email','telefone','endereco','senha']
+
+
+
+/////////////////////////////////////////////////////////////
+
+from rest_framework import serializers 
+from escola.models import Doador
+
+
+class DoadorSerializer(serializers.ModelSerializer):
+    class Meta:
+    model = Doador
+    fields = ['id','nome','email','telefone','endereco','senha']
+
+/////////////////////////////////////////////////////////////
+
+from rest_framework import serializers 
+from escola.models import Doacao
+
+
+class DoacaoSerializer(serializers.ModelSerializer):
+    class Meta:
+    model = Doacao
+    fields = ['id','nome','descricao','quantidade']
+
